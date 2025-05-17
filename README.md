@@ -1,24 +1,27 @@
-📄 LLM_DOC_QA
-A Document Q&A system powered by LLMs (Large Language Models).
-This application allows users to upload documents (like PDFs) and ask questions based on their content.
-It also uses Google Search for external queries when answers are not found inside the documents.
 
-✨ Features
-📚 Upload and query documents (PDF supported).
+# 📄 Auto-content-creator
 
-🤖 Local LLM-based document answering.
+**A Document Q\&A system powered by LLMs (Large Language Models)**
+This application allows users to upload documents (like PDFs) and ask questions based on their content. If the answer isn't found in the document, it intelligently queries Google Search for relevant results.
 
-🔎 External Google Search integration for broader queries.
+🔗 [Live Demo](https://llm-question-answer.onrender.com)
 
-🌐 Deployed using Docker on Render.
+---
 
-🛠️ Built with Flask, LangChain (or similar framework), and Google Custom Search API.
+## ✨ Features
 
-🏗️ Project Structure
-bash
-Copy code
+* 📚 Upload and query documents (PDF supported)
+* 🤖 Local LLM-based document answering
+* 🔎 External Google Search integration for broader queries
+* 🌐 Deployed using Docker on Render
+* 🛠️ Built with Flask, LangChain (or similar framework), and Google Custom Search API
 
-LLM_DOC_QA/
+---
+
+## 🏗️ Project Structure
+
+```
+Auto-content-creator/
 ├── app/
 │   ├── static/        
 │   ├── templates/     
@@ -32,87 +35,97 @@ LLM_DOC_QA/
 ├── utils.py           
 ├── requirements.txt   
 ├── .gitignore         
-├── README.md          
+└── README.md  
+```
 
+---
 
-🚀 How to Run Locally
-Clone the repository
+## 🚀 How to Run Locally
 
-bash
-Copy code
-git clone https://github.com/your-username/LLM_DOC_QA.git
-cd LLM_DOC_QA
-Create a virtual environment and activate it
+### 1. Clone the Repository
 
-bash
-Copy code
+```bash
+git clone https://github.com/your-username/Auto-content-creator.git
+cd Auto-content-creator
+```
+
+### 2. Create and Activate a Virtual Environment
+
+```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install dependencies
+source venv/bin/activate        # On Windows: venv\Scripts\activate
+```
 
-bash
-Copy code
+### 3. Install Dependencies
+
+```bash
 pip install -r requirements.txt
-Set up environment variables
+```
 
-Create a .env file (if needed) with:
+### 4. Set Up Environment Variables
 
-ini
-Copy code
+Create a `.env` file with the following:
+
+```ini
 GOOGLE_API_KEY=your_google_api_key
 GOOGLE_CSE_ID=your_custom_search_engine_id
-Run the application
+```
 
-bash
-Copy code
+### 5. Run the Application
+
+```bash
 python main.py
-Access it at http://localhost:5000
+```
 
-🐳 Docker Deployment
-Build Docker Image:
+Visit: [http://localhost:5000](http://localhost:5000)
 
-bash
-Copy code
+---
+
+## 🐳 Docker Deployment
+
+### Build Docker Image
+
+```bash
 docker build -t llm_doc_qa .
-Run Docker Container:
+```
 
-bash
-Copy code
+### Run Docker Container
+
+```bash
 docker run -d -p 5000:5000 llm_doc_qa
-🌍 Deployment on Render
-This app is deployed on Render using an image hosted on Docker Hub.
+```
 
-Make sure to set the following environment variables in Render:
+---
 
-GOOGLE_API_KEY
+## 🌍 Deployment on Render
 
-GOOGLE_CSE_ID
+This app is deployed on [Render](https://render.com) using Docker.
 
-📜 Technologies Used
-Python
+Be sure to set the following environment variables in Render's settings:
 
-Flask
+* `GOOGLE_API_KEY`
+* `GOOGLE_CSE_ID`
 
-LangChain / RAG
+---
 
-Google Custom Search API
+## 📜 Technologies Used
 
-Docker
+* **Python**
+* **Flask**
+* **LangChain** / RAG-based approach
+* **Google Custom Search API**
+* **Docker**
+* **Render.com** (Deployment)
 
-Render.com (for deployment)
-https://llm-question-answer.onrender.com
+---
 
+## ✅ TODO
 
-✍️ Author
-Anisha Mohanty
+* [ ] Improve UI/UX for uploads and results
+* [ ] Add support for more file formats (e.g., DOCX)
+* [ ] Implement authentication (optional)
+* [ ] Cache frequent queries
 
+---
 
-✅ TODO
- Improve UI/UX for uploads and results.
-
- Add support for more file formats (e.g., DOCX).
-
- Implement authentication (optional).
-
- Caching frequent queries.
-
+Feel free to customize further! Let me know if you want badges, screenshots, or usage examples added.
