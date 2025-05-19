@@ -45,7 +45,7 @@ Auto-content-creator/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/Auto-content-creator.git
+git clone https://github.com/Muskaanng/Auto-content-creator.git
 cd Auto-content-creator
 ```
 
